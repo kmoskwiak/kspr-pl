@@ -1,12 +1,13 @@
 {
-  "name": "page",
+  "name": "kspr-pl",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kasper Moskwiak <kasper.moskwiak@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
