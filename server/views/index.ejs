@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kasper Moskwiak</title>
+  <meta name="author" content="Kasper Moskwiak">
+  <meta name="description" content="Developing software mostly in node.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container menu-container">
+        <div class="header-link" >
+            <img class="avatar" src="https://avatars3.githubusercontent.com/u/5294519?s=50&v=4" width="50" height="50">
+            <div>
+                <a href="/">
+                    <h1 class="header">Kasper Moskwiak</h1>
+                </a>
+                <a href="https://github.com/kmoskwiak">
+                    <h2 class="sub-header"><img src="/assets/images/github.png" height="20px">kmoskwiak</h2>
+                </a>
+            </div>  
+        </div>
+    </div>
+
+  <div class="container">
+      <h1 class="section-header">Projects</h1>
+  </div>
+  <div id="container" class="container">
+    <% for(var i = 0; i < repos.length; i ++) { %>
+        <div class="card card-wrapper">
+                <% if(repos[i].language === 'JavaScript') { %>
+                    <div class="type js">js</div>
+                <% } %>
+                <h2 class="name"><%- repos[i].name %></h2>
+                <p class="description"><%- repos[i].description %></p>
+                <div>
+                    <a class="button github" href="<%- repos[i].html_url %>">GitHub</a>
+                    <!-- <a class="button articles" href="/">Articles</a> -->
+                </div>
+        </div>
+    <% } %>
+  </div>
+
+  <div class="container">
+      <h1 class="section-header">Contact</h1>
+  </div>
+  <div class="container">
+    <p>
+      Find me on <a href="https://github.com/kmoskwiak">GitHub</a> or <a href="https://www.linkedin.com/in/kasper-moskwiak/">Linkedin</a>.
+    </p>
+  </div>
+
+  
+
+  
+</body>
+
+</html>
