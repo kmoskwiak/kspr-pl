@@ -19,6 +19,10 @@ app.get('/', async (req, res) => {
 
         return repo;
     });
+
+    filtered.sort((a, b) => {
+        return b.id - a.id
+    });
    
     return res.render('index', {repos: filtered});
 });
