@@ -15,6 +15,7 @@
     })(window,document,'script','dataLayer','GTM-NCL2FHL');</script>
   <!-- End Google Tag Manager -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Code:400,500&display=swap" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -23,22 +24,67 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCL2FHL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="container menu-container">
-        <div class="header-link" >
-            <img class="avatar" src="https://avatars3.githubusercontent.com/u/5294519?s=50&v=4" width="50" height="50">
+
+
+    <div class="header-container">
+        <div class="container menu-container">
+            <div class="header-link" >
+                <img class="avatar" src="https://avatars3.githubusercontent.com/u/5294519?s=80&v=4" width="80" height="80">
+                <div>
+                    <a href="/">
+                        <h1 class="header">Kasper Moskwiak</h1>
+                    </a>
+                    <a title="GitHub/kmoskwiak" href="https://github.com/kmoskwiak">
+                        <h2 class="sub-header"><img src="/assets/images/github.png" height="20px">kmoskwiak</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="github-s-section">
+                <a class="github-s-link" href="/"><span class="heart">♡</span> Sponsor with GitHub</a>
+                <a class="link" href="/thanks">See all my sponsors</a>
+            </div>
+        </div>
+
+        <div class="cards-container">
             <div>
-                <a href="/">
-                    <h1 class="header">Kasper Moskwiak</h1>
-                </a>
-                <a title="GitHub/kmoskwiak" href="https://github.com/kmoskwiak">
-                    <h2 class="sub-header"><img src="/assets/images/github.png" height="20px">kmoskwiak</h2>
-                </a>
-            </div>  
+                <h2 class="section-header">My last article</h2>
+            </div>
+            
+            <a class="header-card" href="">
+                <div class="thumb" >
+                    <div 
+                        style="background-image: url('https://miro.medium.com/max/2000/1*r-esubczgDBH_BDNzoU92Q.jpeg');"
+                        class="thumb-16x9"></div>
+                </div>
+                <div class="details">
+                    <h3 class="title">Async iterators in JS - database iteration in NodeJS</h3>
+                    <div class="description">How to process entire database (MongoDB, Elasticsearch or PostgreSQL) using modern JavaScript tools. Should I use limit-offset, cursors or range query to get data from database? And why asynchronous iterators play well with database querying.</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="cards-container">
+            <div>
+                <h2 class="section-header">Currently working on</h2>
+            </div>
+            
+            <a class="header-card small" href="https://github.com/kmoskwiak/muchconf">
+                <div class="thumb" >
+                    <div 
+                        style="background-image: url('https://barkpost-assets.s3.amazonaws.com/wp-content/uploads/2013/11/muchdoge-700x393.jpg');"
+                        class="thumb-16x9"></div>
+                </div>
+                <div class="details">
+                    <h3 class="title">muchconf</h3>
+                    <div class="description">Wow! So much configuration, so many sources!</div>
+                </div>
+            </a>
         </div>
     </div>
+    
 
   <div class="container">
-      <h1 class="section-header">Projects</h1>
+      <h1 class="section-header">My projects</h1>
   </div>
   <div id="container" class="container">
     <% for(var i = 0; i < repos.length; i ++) { %>
@@ -65,9 +111,9 @@
     </p>
   </div>
 
-  
 
-  
+
+
 </body>
 
 </html>
