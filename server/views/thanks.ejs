@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kasper Moskwiak</title>
+  <meta name="author" content="Kasper Moskwiak">
+  <meta name="description" content="Developing software mostly in node.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NCL2FHL');</script>
+  <!-- End Google Tag Manager -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Code:400,500&display=swap" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCL2FHL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="header-container thanks">
+        <div class="container menu-container">
+            <div class="header-link" >
+                <img class="avatar" src="https://avatars3.githubusercontent.com/u/5294519?s=80&v=4" width="80" height="80">
+                <div>
+                    <a href="/">
+                        <h1 class="header">Kasper Moskwiak</h1>
+                    </a>
+                    <a title="GitHub/kmoskwiak" href="https://github.com/kmoskwiak">
+                        <h2 class="sub-header"><img src="/assets/images/github.png" height="20px">kmoskwiak</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="github-s-section">
+                <a class="github-s-link" href="/"><span class="heart">♡</span> Sponsor with GitHub</a>
+                <a class="link" href="/thanks">See all my supporters</a>
+            </div>
+        </div>
+
+    </div>
+
+    <% if(sponsors.length) { %>
+
+        <div class="container">
+            <h1>These are people whom I am thankful</h1>
+        </div>
+
+        <div class="container">
+            <ul>
+                <% for(var i = 0; i < sponsors.length; i ++) { %>
+                    <li>
+                        <% if(sponsors[i].url) { %>
+                            <a href="<%- sponsors[i].url %>"><%- sponsors[i].name %></a>
+                        <% } else { %>
+                            <span><%- sponsors[i].name %></span>
+                        <% } %>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+    <% } else { %>
+        <div class="container">
+            <h1>Be first :)</h1>
+        </div>
+    <% } %>
+
+
+</body>
+
+</html>

@@ -1,10 +1,21 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+}
+
 .container {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Code', monospace;
+}
+
+.cards-container {
+    max-width: 1200px;
+    margin: 50px auto 20px auto;
 }
 
 a {
@@ -16,7 +27,18 @@ a {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-    margin-top: 50px;
+}
+
+.header-container {
+    background: #024bf7;
+    color: #eee;
+    padding: 100px 20px 30px 20px;
+}
+
+.header-container.thanks {
+    background: transparent;
+    color: #222;
+    padding: 100px 20px 30px 20px;
 }
 
 .header-link {
@@ -27,6 +49,7 @@ a {
 .header-link .avatar {
     border-radius: 40px;
     margin-right: 20px;
+    border: 1px solid #e0b8db;
 }
 
 .header-link a {
@@ -37,7 +60,8 @@ a {
 }
 
 .section-header {
-  font-weight: 500;  
+    font-size: 1em;
+    font-weight: 500;  
 }
 
 .header {
@@ -53,7 +77,6 @@ a {
 .sub-header {
     font-size: 14px;
     font-weight: 300;
-    color: #777;
     margin: 0;
     padding: 0;
 }
@@ -61,10 +84,114 @@ a {
 .sub-header img {
     vertical-align: bottom;
     height: 14px;
+    filter: invert();
     display: inline-block;
     padding: 3px;
     margin: 0;
 }
+
+.header-container.thanks .sub-header img {
+    filter: none;
+}
+
+.github-s-section {
+    padding-top: 20px;
+}
+
+.github-s-link {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px 30px;
+    background: #eee;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.github-s-section .link {
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #e0b8db;
+    text-align: center;
+    font-weight: 500;
+}
+
+.github-s-link .heart {
+    color: #e818ce;
+    font-weight: 500;
+}
+
+.header-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    color: #1d8cdc;
+}
+
+.header-card:hover {
+    color: #ef79dfb5;
+}
+
+.header-card .thumb {
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+}
+
+.header-card .thumb .thumb-16x9 {
+    padding-top: 66%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.header-card .details {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #eee;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.header-card .details .title {
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 2em;
+}
+
+.header-card.small .thumb {
+    min-width: 200px;
+    width: 20%;
+}
+
+.header-card.small .details .title {
+    font-size: 1.5em;
+}
+
+@media only screen and (min-width: 800px) {
+
+    .header-card {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .header-card .thumb {
+        width: 30%;
+    }
+
+    .header-card .details {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 70%;
+        margin-top: 0;
+    }
+}
+
 
 .menu {
     display: inline-block;
@@ -81,7 +208,7 @@ a {
 .menu a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #555;
+    color: rgb(145, 145, 145);
     display: inline-block;
     min-width: 100px;
     padding: 20px;
@@ -129,9 +256,6 @@ a {
     background: #444;
     color: #eee;
     font-weight: bold;
-}
-.card .button.github:hover {
-    
 }
 
 .card .button.articles {

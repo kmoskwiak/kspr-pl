@@ -11,6 +11,12 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
+app.get('/thanks', async (req, res) => {
+    const sponsors = [];
+
+    return res.render('thanks', { sponsors: sponsors });
+});
+
 app.get('/', async (req, res) => {
 
     let filtered = repos.filter((repo) => {
